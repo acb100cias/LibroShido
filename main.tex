@@ -1,19 +1,21 @@
 % $Id: $
-\documentclass[letterpaper,12pt,twoside]{report}
-
-
+\documentclass[letterpaper,12pt,twoside]{book}
 \usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
+\usepackage[spanish, es-tabla]{babel}
 \usepackage{graphicx}
 \usepackage{fix-cm} % scalable fonts
 \usepackage{type1cm}
 \usepackage{lettrine}
-\usepackage{amssymb, amsmath}
+\usepackage{amssymb,amsmath,amsthm,amsfonts,latexsym}
 \usepackage{wrapfig}
 \usepackage{caption}
 \usepackage[T1]{fontenc}
 \usepackage[sc]{mathpazo}
-\usepackage{gb4e}
+%\usepackage{gb4e}
+\include{acb_use}
+
+
+
 \linespread{1.05}      
 % Different font in captions
 \newcommand{\captionfonts}{\small}
@@ -41,7 +43,24 @@
 %\makeglossary
 
 \usepackage[round]{natbib} 
+%%%%%%%%%%%%%%%%%%%
+\newtheorem{definicion}{Definici\'on}
+\newtheorem{ejemplo}{Ejemplo}
+\newtheorem{teorema}{Teorema}
+\newtheorem{lema}{Lema}
+\newtheorem{prop}{Proposici\'on}
+\newtheorem{af}{Afirmaci\'on}
+\newtheorem{coro}{Corolario}
+\newtheorem{obs}{Observaci\'on}
+\newtheorem{casos}{Caso}
+\renewcommand{\spanishrefname}{Bibliograf\'ia.}
+\renewcommand{\spanishproofname}{Prueba.}
+\decimalpoint
+%\pagestyle{fancy}
+\def\sectionautorefname{section}
 
+
+%%%%%%%%%%%%%%%%
 
 \begin{document}
 
@@ -153,7 +172,9 @@ y acorde a una filosof\'ia de acceso libre para publicaciones acad\'emicas.
 \chapter{Ecuaciones diferenciales de primer orden}
 \addcontentsline{toc}{chapter}{Ecuaciones diferenciales de primer orden}
 \include{02-1erorden}
-
+\include{separacondevariables}
+\include{poblaciones2}
+\include{existenciayunicidadH}
 \cleardoublepage
 
 
