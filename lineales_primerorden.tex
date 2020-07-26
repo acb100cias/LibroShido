@@ -1,0 +1,29 @@
+\section{Ecuaciones Lineales de Primer Orden}
+
+Una ecuación diferencial lineal de primer orden tiene la forma
+
+$$
+\frac{\mathrm{d}y}{\mathrm{d}x}+p(x)y=f(x)
+$$
+donde las funciones $p$ y $f$ son continuas en la región donde existe la solución. Si $f(x)\equiv0$ entonces llamaremos a la ecuación homogénea.
+
+En este caso la ecuación lineal puede reescribirse como
+$$
+\frac{\mathrm{d}y}{\mathrm{d}x}=-p(x)y
+$$
+la cual claramente es de variables separables. En efecto obtenemos la ecuación integral equivalente 
+$$
+\int\frac{\mathrm{d}y}{y}=-\int p(x)\mathrm{d}x
+$$
+integrando obtenemos
+$$
+\ln |y|=-\int p(x)\mathrm{d}x+\ln c_1,\qquad c_1>0
+$$
+y por tanto
+$$
+y=ce^{-\int p(x)\mathrm{d}x}, \quad c\neq 0
+$$
+
+Observese que aldividir entre $y$ perdimos la solución trivial $y\equiv 0$, pero podemos recuperarla tomando $c=0$
+
+
