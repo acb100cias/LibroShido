@@ -54,8 +54,8 @@ Si ponemos $n=0$ y con la igualdad \ref{eq:5} calculamos $p(1)$ que, a su vez, n
 
 Esta es una \emph{fórmula predictiva}. Si se conoce la condición inicial $p(0)$ y la tasa de crecimiento \emph{per cápita} por unidad de tiempo, entonces la expresión \ref{eq:6} nos da la capacidad de conocer el valor futuro de $p$ para cualquier tiempo transcurrido mientras el tiempo se mida en unidades discretas.
 
-\begin{exe}
-		\ex {EJEMPLO
+\begin{ejemplo}
+		
 		
 		\noindent La bacteria \emph{Escherichia coli} tiene una forma aproximadamente cilíndrica en la que la altura del cilindro mide cerca de 1$\mu$. Se reproduce por bipartición cada hora. La pregunta es ¿Sí se tiene inicialmente una bacteria, cuantas habrá después de una semana?.
 		
@@ -71,14 +71,11 @@ Una semana tiene 604800 segundos, por lo tanto y de acuerdo con nuestra fórmula
 p(168)=2^{168}\approx 10^50
 \]
 Se deja al lector que realice el siguiente cálculo: si la bacteria fuera un cubo con $1\mu$ de lado ¿Qué volumen ocupan las bacterias que resultan de la reproducción a partir de una sola después de una semana?
-}
-	
-	
-		
-		
-\end{exe}
-\begin{exe}
-		\ex {EJEMPLO
+
+\end{ejemplo}
+
+\begin{ejemplo}
+
 		\noindent La tasa de crecimiento de la República Mexicana en el 2015 fue 1.4\% anual. En ese mismo año la población total eran 9 millones. ¿Cuántos mexicanos habrá en el año 2050?
 		
 		En este caso $q=1.4\%=1.4/100=0.014$ y la $p(0)=9$. Donde hemos puesto el cero del tiempo en el 2015. Si ponemos que el tiempo transcurrido es de 35 años, la fórmula predictiva \ref{eq:6} queda como:
@@ -87,14 +84,14 @@ Se deja al lector que realice el siguiente cálculo: si la bacteria fuera un cub
 		p(35)=9\times(1.014)^{35}=9\times1.627=14.64 \textrm{ millones de habitantes}
 		\]
 		Esa es nuestra predicción. Sin embargo, la CONAPO pronostica una población de $7.7$ millones ¿Cómo explica usted la discrepancia?
-		}
+		
 
-\end{exe}
+\end{ejemplo}
 
 En los dos ejemplos, tenemos sendas tasas de crecimiento positivas. Ahora vamos a ver que también se puede hablar de decrecimiento a tasa constante, veamos un ejemplo ilustrativo:
 
-\begin{exe}
-\ex EJEMPLO
+\begin{ejemplo}
+
 \noindent  La cima del monte Everest se encuentra a $8,848$ metros sobre el nivel del mar y la presión atmosférica es de $0.33$ atmósferas. Se trata de encontrar la presión atmosférica en la Ciudad de México --$2240$ metros sobre el nivel del mar--.
 
 En este caso, la variable independiente no es el tiempo sino la altura a partir del nivel de mar. A la altura cero la presión es $1$atm. 
@@ -146,7 +143,7 @@ p(2400)=p(0)(1+q_m)^{2400}=p(0)(1-0.0001259)^{2400}=p(0)0.76
 
 Y llegamos a la respuesta correcta: La presión atmosférica en la Ciudad de México es el $76\%$ de la presión al nivel del mar.
 
-\end{exe}
+\end{ejemplo}
 
 
 
@@ -179,10 +176,10 @@ En un resumen parcial rápido, podemos decir que hemos aprendido lo que es una t
 
 Si se conocen: i) La tasa de crecimiento $q$, ii) la condición inicial $p(0)$ y las unidades de tiempo $n$ que han de transcurrir, entonces podemos predecir el valor de la magnitud $p(n)$. A este esquema de trabajo, le vamos a llamar el \emph{problema directo}.
 
-Sin embargo, también es importante el preguntarse cuántas unidades de tiempo $n$ han de transcurrir para que tengamos un valor prefijado de la magnitud $p(n)$
+Sin embargo, también es un problema de importancia práctica el preguntarse cuántas unidades de tiempo $n$ han de transcurrir para que tengamos un valor prefijado de la magnitud $p(n)$
 
-\begin{exe}
-\ex {EJEMPLO
+\begin{ejemplo}
+
 Si la presión atmosférica disminuye con la altura a tasa constante ¿A qué altura se tendrá el $80\%$ de la presión al nivel del mar?
 Recordemos la fórmula predictiva \ref{eq:6}
 
@@ -198,11 +195,7 @@ n=\dfrac{\log\frac{p(n)}{p(0)}}{\log(1+q_m)}
 
 Y dado que sabemos que $q_m=0.01259$ y que $p(n)=0.8p(0)$, haciendo las sustituciones pertinentes\footnote{De aquí adelante utilizaremos la notación $\log()$ para el logaritmo natural. Todos los resultados son aproximados pues hemos truncado las los números a pocas cifras después del punto decimal.} llegamos a la respuesta: $n=1780.5135$. A la altura aproximada de $1780$ metros, la presión atmosférica es el $80\%$ de la que hay al nivel del mar.
 
-
-
-
-}
-\end{exe}
+\end{ejemplo}
 
 Hasta ahora, todo parece ir sobre ruedas pero el ejemplo anterior amerita una mayor reflexión. El resultado de ls operaciones es $n=1780.5135$ y arbitrariamente nos hemos conformado con la aproximación truncando las cifras no enteras ¿Realmente no lo podemos hacer mejor?. 
 
@@ -218,11 +211,11 @@ En los párrafos anteriores insistimos en la variable independiente $n$ tenía q
     p(t)=p(0)(1+q)^t=p(0)e^{kt}
 \end{align}
 
-Que sea válida para $t$ entero pero que interpole los valores de $p(t)$ para cualquier valor de $t$ en los números reales.
+Que sea válida para $t$ entero pero que interpole los valores de $p(t)$ para cualquier valor de $t$ en los números reales. Si se conoce la tasa $q$ por unidad de tiempo, entonces es fácil calcular la tasa instantánea $k$
 
 
 
-
+\section{El crecimiento Malhusiano}
 
 
 
