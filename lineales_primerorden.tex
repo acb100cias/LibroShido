@@ -24,6 +24,50 @@ $$
 y=ce^{-\int p(x)\mathrm{d}x}, \quad c\neq 0
 $$
 
-Observese que aldividir entre $y$ perdimos la solución trivial $y\equiv 0$, pero podemos recuperarla tomando $c=0$
+Observese que al dividir entre $y$ perdimos la solución trivial $y\equiv 0$, pero podemos recuperarla tomando $c=0$.
 
+Para el caso no-homogéneo aplicaremos el llamado metodo de varición de constantes. Comenzamos integrando la ecuación homogenea asociada.
+$$
+\frac{\mathrm{d}y}{\mathrm{d}x}+p(x)y=0
+$$
+obteniendo la solución general
+$$
+y(x)=ce^{-\int p(x)\mathrm{d}x}
+$$
+cuando $c$ es una constante $y(x)$ es una solución para la homogenea. 
+
+Ahora supongamos que $c$ es una función desconocida que depende de $x$. Derivando $y(x)$ tenemos:
+$$
+\frac{\mathrm{d}y}{\mathrm{d}x}=\frac{\mathrm{d}c}{\mathrm{d}x}e^{-\int p(x)\mathrm{d}x}-c(x)p(x)e^{-\int p(x)\mathrm{d}x}
+$$
+si esta es una solución para la ecuación no-homogénea entonces debe satisfacer
+$$
+\frac{\mathrm{d}c}{\mathrm{d}x}e^{-\int p(x)\mathrm{d}x}-c(x)p(x)e^{-\int p(x)\mathrm{d}x}+p(x)c(x)e^{-\int p(x)\mathrm{d}x}=f(x)
+$$
+así que
+$$
+\frac{\mathrm{d}c}{\mathrm{d}x}=f(x)e^{\int p(x)\mathrm{d}x}
+$$
+integrando obtenemos
+$$
+c(x)=\int f(x)e^{\int p(x)\mathrm{d}x}\mathrm{d}x+c_1
+$$
+y por tanto la solución de nuestra ecuación no-homogenea tiene la forma
+$$
+y(x)=c_1e^{-\int p(x)\mathrm{d}x}+e^{-\int p(x)\mathrm{d}x}\int f(x)e^{\int p(x)\mathrm{d}x}\mathrm{d}x
+$$
+
+Un aspecto importante del proceso anterior es que la solución general de la ecuacion lineal no-homogéneaestá dada como la suma de la solución de la ecuación homogénea asociada y una solución particular de la ecuación no-homogénea, que corresponde a tomar el valor $c_1=0$
+$$
+e^{-\int p(x)\mathrm{d}x}\int f(x)e^{\int p(x)\mathrm{d}x}\mathrm{d}x
+$$
+
+\begin{ejemplo}
+ Consideremos la ecuación
+ $$
+ \frac{\mathrm{d}y}{\mathrm{d}x}-\frac{y}{x}=x^2
+ $$
+ apliquemos el método de variacion de constantes
+ 
+\end{ejemplo}
 
