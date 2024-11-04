@@ -207,11 +207,25 @@ p(n)=p(0)(1+q)^n
 
 En los párrafos anteriores insistimos en la variable independiente $n$ tenía que ser un número entero de modo que no podemos apostar a que la respuesta del ejemplo anterior sea rigurosamente la obtenida. Sin embargo, ya hemos desarrollado un método para encontrar la tasa de crecimiento per cápita para submúltiplos de la tasa por unidad de tiempo. Ahora supongamos que existe un número $k$, al que llamaremos la \emph{tasa instantánea} de crecimiento que cumple:
 
-\begin{align}
+\begin{align*}
     p(t)=p(0)(1+q)^t=p(0)e^{kt}
+\end{align*}
+
+Que sea válida para $t$ entero pero que interpole los valores de $p(t)$ para cualquier valor de $t$ en los números reales. Si se conoce la tasa $q$ por unidad de tiempo, entonces es fácil calcular la tasa instantánea $k$:
+
+\[
+k=\dfrac{1}{\log(1+q)}
+\]
+
+
+Entonces ya tenemos dos fórmulas predictivas,la número \ref{eq:6} que nos sirve para unidades enteras de tiempo y:
+\begin{align}
+   p(t)=p(0)e^{kt}
 \end{align}
 
-Que sea válida para $t$ entero pero que interpole los valores de $p(t)$ para cualquier valor de $t$ en los números reales. Si se conoce la tasa $q$ por unidad de tiempo, entonces es fácil calcular la tasa instantánea $k$
+Evidentemente \label{eq:8} contiene a \ref{eq:6} como caso particular pero ambas son útiles. 
+
+
 
 
 

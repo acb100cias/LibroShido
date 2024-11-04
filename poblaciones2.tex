@@ -23,9 +23,75 @@ $$
 $$
 tenemos que:
 $$
-\ln(\frac{x}{(1-x)}=\rho t+\xi_1
+\ln\left(\frac{x}{(1-x)}\right)=\rho t+\xi_1
 $$
-se sigue que:
+aplicando la exponencial en ambos lados de la ecuación se sigue que:
 $$
-x(t)=\xi\frac{e^{\rho t}}{1+e}
+x(t)=e^\xi\frac{e^{\rho t}}{1+e^{\rho t}}
 $$
+
+Consideremos el caso general:
+$$
+    \dot{x}=\rho(1-\frac{x}{K})x
+$$
+
+en este caso la  ecuación integral equivalente integral es 
+$$
+\int \dfrac{\mathrm{d}x}{x(1-\frac{x}{K})}=\int\rho \mathrm{d}t
+$$
+nuevamente utilizando integración por fracciones parciales obtenemos una solución general
+$$
+x(t)=\frac{e^\xi e^{\rho t}}{1+e^\xi e^{\rho t}} 
+$$
+
+En ambos casos $\xi$ es una constante arbitraria de integración, determinada por las condiciones iniciales, en el caso general si $x(0)=x_0$ tenemos que
+$$
+x_0=\dfrac{e^{\xi}}{1+e^{\xi}}
+$$
+así que
+$$
+e^{\xi}=\dfrac{x_0}{1-x_0}
+$$
+y la solución general, dada una condición inicial $x_0$  es:
+$$
+x(t)=\frac{\frac{x_0}{1-x_0} e^{\rho t}}{1+\frac{x_0}{1-x_0} e^{\rho t}}
+$$
+
+\subsection{Estabilidad}
+
+Observemos ahora que esta ecuación tiene soluciones especiales, constantes es decir, para las cuales:
+$$
+\dot{x}\equiv 0
+$$
+en términos dinámicos estamos hablando de soluciones en las que la dinámica se detiene, nos interesa en general determinar las condiciones iniciales que satisfacen estas soluciones, llamadas soluciones estacionarias o de equilibrio. En el caso de la ecuación para el crecimiento logístico tenemos:
+$$
+    0=\rho(1-\frac{x}{K})x
+$$
+
+Claramente $x\equiv 0$ es una solución, y $x\equiv K$ es otra. Pero qué significan estas dos soluciones. En términos del objeto matemático, estamos ante soluciones constantes. Dadas distintas condiciones iniciales tenemos distintas soluciones a la ecuación... Geométricamente, las distintas soluciones determinan una foliación del plano vía curvas continuas...le llamamos espacio-fase ..
+
+
+
+\subsection{Soluciones numéricas y simbólicas }
+
+No todos los problemas pueden resolverse en términos cerrados, por ejemplo.....
+
+Para tales problemas podeos dar una solución aproximada, con la ayuda de la computadora podemos aproximar conjuntos de puntos cuyas
+
+Por otro lado el desarrollo del cómputo simbólico ha significado una importante herramienta en los problemas que involucran la solución de sistemas de ecuaciones diferenciales.
+
+El lenguaje de programación Python es un lenguaje de alto nivel, orientado a objetos, con una gran comunidad de usuarios y desarrolladores
+
+\subsubsection{Método de Euler en python}
+
+Consideremos,
+
+
+Así en Python podemos implementarlo de la siguiente forma:
+\begin{verbatim}
+    
+\end{verbatim}
+
+\subsubsection{Método de Runge-Kutta en python}
+
+
